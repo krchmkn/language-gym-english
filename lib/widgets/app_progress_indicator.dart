@@ -10,6 +10,12 @@ class AppProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('$value%');
+    return Text(
+      '$value%',
+      style: const TextStyle(
+        color: CupertinoColors.inactiveGray,
+        fontWeight: FontWeight.w300,
+      ),
+    );
   }
 }

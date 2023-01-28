@@ -17,7 +17,8 @@ class AppTextField extends StatelessWidget {
       onChanged: handler,
       autocorrect: false,
       autofocus: true,
-      placeholder: 'Enter the suggested English phrase',
+      placeholder: 'Enter English phrase',
+      padding: const EdgeInsets.all(14.0),
     );
   }
 }
