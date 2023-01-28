@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:language_gym_english/api/fetch_phrases.dart';
 import 'package:language_gym_english/widgets/app_loading.dart';
@@ -121,7 +123,10 @@ class AppHomeScreenState extends State<AppHomeScreen> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: const Text(constants.appTitle),
+        middle: Image.asset(
+          'assets/images/icon-text.png',
+          scale: 2.5,
+        ),
         trailing: AppProgressIndicator(value: _progress),
       ),
       child: FutureBuilder<List>(
