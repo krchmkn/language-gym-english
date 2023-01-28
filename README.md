@@ -1,3 +1,3 @@
 # language_gym_english
 
-Language training app
+Flutter language training app.
