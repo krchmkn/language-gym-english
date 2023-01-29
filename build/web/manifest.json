@@ -1,6 +1,6 @@
 {
-    "name": "language_gym_english",
-    "short_name": "language_gym_english",
+    "name": "Language GYM English",
+    "short_name": "English GYM",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
