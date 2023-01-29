@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
@@ -14,12 +15,11 @@ void main() {
     app.main();
     await tester.pumpAndSettle();
 
-    expect(find.text('Language GYM: English'), findsOneWidget);
-
     final Finder progressIndicator = find.byType(AppProgressIndicator);
     final Finder appText = find.byType(AppText);
     final Finder textField = find.byType(AppTextField);
 
+    expect(find.byType(Image), findsOneWidget);
     expect(progressIndicator, findsOneWidget);
     expect(appText, findsOneWidget);
     expect(textField, findsOneWidget);

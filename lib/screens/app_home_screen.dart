@@ -18,6 +18,7 @@ class AppHomeScreenState extends State<AppHomeScreen> {
   late Future<List> _futurePhrases;
   late int _index;
   late List _phrases;
+  bool _isShowTextFieldWarning = false;
 
   @override
   void initState() {
@@ -68,8 +69,15 @@ class AppHomeScreenState extends State<AppHomeScreen> {
     });
   }
 
+  void _toggleWarning(bool state) {
+    setState(() {
+      _isShowTextFieldWarning = state;
+    });
+  }
+
   void _textFieldHandler(String value, BuildContext context) {
     if (value.toLowerCase().trim() != _suggestedText.toLowerCase()) {
+      _toggleWarning(value.length == _suggestedText.length);
       return;
     }
 
@@ -113,6 +121,8 @@ class AppHomeScreenState extends State<AppHomeScreen> {
       suggestedTextObj: _suggestedTextObj,
       controller: _controller,
       textFieldHandler: _textFieldHandler,
+      isShowTextFieldWarning: _isShowTextFieldWarning,
+      textFieldMaxLength: _suggestedText.length,
     );
   }
 
@@ -120,10 +130,7 @@ class AppHomeScreenState extends State<AppHomeScreen> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Image.asset(
-          'assets/images/icon-text.png',
-          scale: 2.5,
-        ),
+        middle: Image.asset('assets/images/icon-text.png', scale: 2.5),
         trailing: AppProgressIndicator(value: _progress),
       ),
       child: FutureBuilder<List>(

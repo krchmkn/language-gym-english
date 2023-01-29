@@ -16,16 +16,17 @@ class AppText extends StatelessWidget {
           Text(
             data['phrase'],
             style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w500,
+              fontSize: 28.0,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 5.0),
+          const SizedBox(height: 10.0),
           Text(
             data['ru'],
             style: const TextStyle(
               color: CupertinoColors.inactiveGray,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w300,
+              fontSize: 18.0,
             ),
           ),
         ],
