@@ -27,7 +27,7 @@ class AppContent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            AppText(data: suggestedTextObj),
+            AppText(data: suggestedTextObj, currentText: controller.text),
             const SizedBox(height: spacing),
             AppTextField(
               controller: controller,
