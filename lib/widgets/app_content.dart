@@ -6,7 +6,6 @@ class AppContent extends StatelessWidget {
   final Map suggestedTextObj;
   final TextEditingController controller;
   final Function textFieldHandler;
-  final int textFieldMaxLength;
   final bool isShowTextFieldWarning;
 
   const AppContent({
@@ -14,7 +13,6 @@ class AppContent extends StatelessWidget {
     required this.suggestedTextObj,
     required this.controller,
     required this.textFieldHandler,
-    required this.textFieldMaxLength,
     required this.isShowTextFieldWarning,
   });
 
@@ -37,7 +35,7 @@ class AppContent extends StatelessWidget {
                 textFieldHandler(value, context);
               },
               isShowWarning: isShowTextFieldWarning,
-              maxLength: textFieldMaxLength,
+              suggestedText: suggestedTextObj['phrase'],
             ),
           ],
         ),

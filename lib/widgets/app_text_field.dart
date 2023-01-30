@@ -4,14 +4,14 @@ class AppTextField extends StatelessWidget {
   final TextEditingController controller;
   final void Function(String) handler;
   final bool isShowWarning;
-  final int maxLength;
+  final String suggestedText;
 
   const AppTextField({
     super.key,
     required this.controller,
     required this.handler,
     required this.isShowWarning,
-    required this.maxLength,
+    required this.suggestedText,
   });
 
   Widget? get _warningIcon {
@@ -32,9 +32,9 @@ class AppTextField extends StatelessWidget {
       onChanged: handler,
       autocorrect: false,
       autofocus: true,
-      placeholder: 'Введите текст на английском',
+      placeholder: suggestedText,
       padding: const EdgeInsets.all(20.0),
-      maxLength: maxLength,
+      maxLength: suggestedText.length,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: CupertinoColors.extraLightBackgroundGray,

@@ -10,7 +10,5 @@ Future<List> fetchPhrases() async {
     return throw Exception('Failed to load phrases');
   }
 
-  List result = jsonDecode(response.body);
-  result.shuffle();
-  return result;
+  return jsonDecode(response.body);
 }

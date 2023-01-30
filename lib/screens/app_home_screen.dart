@@ -76,8 +76,12 @@ class AppHomeScreenState extends State<AppHomeScreen> {
   }
 
   void _textFieldHandler(String value, BuildContext context) {
-    if (value.toLowerCase().trim() != _suggestedText.toLowerCase()) {
-      _toggleWarning(value.length == _suggestedText.length);
+    RegExp regexp = RegExp(r'\W+');
+    String val = value.toLowerCase().trim().replaceAll(regexp, '');
+    String text = _suggestedText.toLowerCase().replaceAll(regexp, '');
+
+    if (val != text) {
+      _toggleWarning(val.length == text.length);
       return;
     }
 
@@ -122,7 +126,6 @@ class AppHomeScreenState extends State<AppHomeScreen> {
       controller: _controller,
       textFieldHandler: _textFieldHandler,
       isShowTextFieldWarning: _isShowTextFieldWarning,
-      textFieldMaxLength: _suggestedText.length,
     );
   }
 
