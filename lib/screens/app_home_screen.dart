@@ -76,9 +76,8 @@ class AppHomeScreenState extends State<AppHomeScreen> {
   }
 
   void _textFieldHandler(String value, BuildContext context) {
-    RegExp regexp = RegExp(r'[^\w ]');
-    String val = value.toLowerCase().trim().replaceAll(regexp, '');
-    String text = _suggestedText.toLowerCase().replaceAll(regexp, '');
+    String val = value.toLowerCase().trim();
+    String text = _suggestedText.toLowerCase();
 
     if (val != text) {
       _toggleWarning(val.length == text.length);
