@@ -45,6 +45,7 @@ class AppText extends StatelessWidget {
               style: DefaultTextStyle.of(context).style,
               children: _richText,
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 10.0),
           Text(
@@ -54,6 +55,7 @@ class AppText extends StatelessWidget {
               fontWeight: FontWeight.w300,
               fontSize: 18.0,
             ),
+            textAlign: TextAlign.center,
           ),
         ],
       ),

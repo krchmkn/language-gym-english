@@ -15,14 +15,12 @@ class AppTextField extends StatelessWidget {
   });
 
   Widget? get _warningIcon {
-    if (isShowWarning) {
-      return Padding(
-        padding: const EdgeInsets.only(right: 10.0),
-        child: Image.asset('assets/images/icon-warning-48.png', scale: 1.5),
-      );
-    }
-
-    return null;
+    return isShowWarning
+        ? Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Image.asset('assets/images/icon-warning-48.png', scale: 2),
+          )
+        : null;
   }
 
   @override
@@ -39,7 +37,8 @@ class AppTextField extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: CupertinoColors.extraLightBackgroundGray,
       ),
-      suffix: _warningIcon,
+      prefix: _warningIcon,
+      clearButtonMode: OverlayVisibilityMode.editing,
     );
   }
 }
