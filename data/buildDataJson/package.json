@@ -1,0 +1,11 @@
+{
+  "name": "build_data_json",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "export:json": "npm i && node index.js -f en_data -o ../../build/web/data.json"
+  },
+  "devDependencies": {
+    "minimist": "^1.2.7"
+  }
+}
