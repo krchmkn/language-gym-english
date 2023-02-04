@@ -2,4 +2,4 @@
 
 Flutter language training app (ios, android, web).
 
-Try the web version [kda.name/language-gym-english](https://kda.name/language-gym-english/)
+Try the web version [lge.kda.name](https://lge.kda.name)
