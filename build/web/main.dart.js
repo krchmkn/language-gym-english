@@ -18603,7 +18603,7 @@ throw A.d(A.bO("Invalid "+a+' "'+b+'": '+J.akG(r),J.ad4(r),J.akH(r)))}else throw
 a96(){var s=0,r=A.W(t.j),q,p
 var $async$a96=A.X(function(a,b){if(a===1)return A.T(b,r)
 while(true)switch(s){case 0:s=3
-return A.a3(A.asD(A.pG("https://kda.name/data/language_gym_english.json")),$async$a96)
+return A.a3(A.asD(A.pG("https://lge.kda.name/data.json")),$async$a96)
 case 3:p=b
 if(p.b!==200){q=A.H(A.c9("Failed to load phrases"))
 s=1
